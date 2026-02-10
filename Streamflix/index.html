@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamflix - Películas y Series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body class="bg-black text-white">
+
+    <header class="hero-section">
+        <nav class="netflix-nav">
+            <h1 class="logo">STREAMFLIX</h1>
+            <a href="login.html" class="btn btn-danger fw-bold shadow">Iniciar sesión</a>
+        </nav>
+
+        <div class="hero-overlay d-flex align-items-center justify-content-center text-center">
+            <div class="hero-content px-3">
+                <h1 class="display-3 fw-bold">Películas, series y mucho más</h1>
+                <p class="fs-4">Disfruta donde quieras. Cuando quieras. Como quieras.</p>
+                <div class="mt-4">
+                    <a href="login.html" class="btn btn-danger btn-lg px-5 py-3 fw-bold">COMENZAR ></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5 position-relative">
+        <h2 class="mb-4 fw-bold">Tendencias ahora</h2>
+
+        <div class="slider-wrapper">
+            <button class="slider-arrow left-arrow" onclick="scrollSlider('recomendaciones', -1)"
+                aria-label="Izquierda">&#10094;</button>
+
+            <div class="recommendations-slider" id="recomendaciones">
+                <div class="movie-card"><img src="images/Bridgenton.webp" alt="Bridgenton"></div>
+                <div class="movie-card"><img src="images/Blind Sherlock.webp" alt="Blind Sherlock"></div>
+                <div class="movie-card"><img src="images/Stranger things.webp" alt="Stranger things"></div>
+                <div class="movie-card"><img src="images/The RIP.webp" alt="The RIP"></div>
+                <div class="movie-card"><img src="images/The lincoln lawyer.webp" alt="The lincoln lawyer"></div>
+                <div class="movie-card"><img src="images/Salvador.webp" alt="Salvador"></div>
+            </div>
+
+            <button class="slider-arrow right-arrow" onclick="scrollSlider('recomendaciones', 1)"
+                aria-label="Derecha">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="mb-4 fw-bold">Más razones para unirse</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <h3>Disfruta en tu TV</h3>
+                <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV y más.</p>
+                <span class="reason-icon"></span>
+            </div>
+            <div class="reason-card">
+                <h3>Descarga y ve offline</h3>
+                <p>Guarda tus títulos favoritos fácilmente y tendrás siempre algo que ver.</p>
+                <span class="reason-icon"></span>
+            </div>
+            <div class="reason-card">
+                <h3>Disfruta donde quieras</h3>
+                <p>Películas ilimitadas en tu teléfono, tableta, ordenador y televisor.</p>
+                <span class="reason-icon"></span>
+            </div>
+            <div class="reason-card">
+                <h3>Perfiles para niños</h3>
+                <p>Aventuras con sus personajes favoritos en un espacio diseñado para ellos.</p>
+                <span class="reason-icon"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container py-5 text-secondary border-top border-dark mt-5">
+        <p>¿Tienes dudas? Llama al <a href="tel:000000000" class="text-secondary text-decoration-none">000 000 000</a>
+        </p>
+        <div class="footer-grid">
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Centro de ayuda</a>
+            <a href="#">Términos de uso</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p class="mt-4 small">© 2026 Streamflix España</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function scrollSlider(id, direction) {
+            const slider = document.getElementById(id);
+            const scrollAmount = slider.clientWidth * 0.8;
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>
